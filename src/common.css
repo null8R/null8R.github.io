@@ -1,0 +1,197 @@
+html, body{
+  width: 100%;
+	height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  /*cursor: auto;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;*/
+}
+body:after{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+  z-index: -1;
+  background-size: 200% 200%;
+  animation: gradient 13s ease infinite;
+}
+
+main{
+  padding: 30px;
+  padding-top: 60px;
+  padding-bottom: 150px;
+}
+
+footer {
+  text-align: center;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  /*opacity: 0.50;
+  background-color: #fff;*/
+  color: #000;
+}
+
+a{
+  text-decoration: none!important; 
+}
+
+button{
+  cursor: auto;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+}
+
+img.emoji{
+  height: 1em;
+  width: 1em;
+  margin: 0.05em 0.1em;
+  vertical-align: -0.1em;
+}
+
+.opening{
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  position: fixed;
+  
+  /*nav-bar flex-top: 1030;*/
+  z-index: 1031;
+}
+
+.op-skip{
+  padding-top: 75vh;
+  text-align: center;
+}
+.skip{
+  display: inline-block;
+  padding: 0.3em 1em;
+  color: #0de1bd;
+  border: solid 2px #0de1bd;
+  border-radius: 3px;
+  transition: .4s;
+}
+.skip:hover{
+  background: #0de1bd;
+  color: #fff;
+}
+
+.link{
+  width: 16px; 
+  height: 16px;
+}
+
+.name{
+  color: #0de1bd;
+}
+
+.glass-filter{
+  backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+@supports not (backdrop-filter: blur(5px)) {
+  .glas-filter{
+    background-color: rgba(255, 255, 255, 0.4);
+  }
+}
+@media all and (-ms-high-contrast: none) {
+  *{
+    font-size: initial;
+  }
+  .glas-filter{
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+}
+
+/* op */
+#op {
+  width: 50vw;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-53%, -60%);
+}
+#op.fin .path-1,
+#op.fin .path-2,
+#op.fin .path-3 {
+  stroke-dashoffset: 0;
+}
+#op.fin .path-4 {
+  stroke-width: 18px;
+}
+.path {
+  fill: none;
+  stroke: #000;
+  stroke-width: 18px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.path-1 {
+  stroke-dasharray: 1850 2000;
+  stroke-dashoffset: 1851;
+  transition: 5s linear;
+}
+.path-2 {
+  stroke-dasharray: 260 1000;
+  stroke-dashoffset: 261;
+  transition: 1.2s linear 5.2s;
+}
+.path-3 {
+  stroke-dasharray: 100 1000;
+  stroke-dashoffset: 101;
+  transition: 1s linear 6.5s;
+}
+.path-4 {
+  stroke-width: 0;
+  transition: 0.1s linear 7.5s;
+}
+
+.move-top{
+  position: fixed;
+  right: 10px;
+  bottom: 20px;
+  height: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  transform: rotate(90deg);
+  font-size: 90%;
+  line-height: 1.5rem;
+  color: #000;
+  padding: 0 0 0 35px;
+  border-top: solid 1px;
+  z-index: 2;
+}
+.move-top::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -1px;
+  left: 0px;
+  width: 15px;
+  border-top: solid 1px;
+  transform: rotate(35deg);
+  transform-origin: left top;
+}
+
+/*background-gradation */
+@keyframes gradient{
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}

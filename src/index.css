@@ -1,0 +1,24 @@
+body::after{
+  background-image: linear-gradient(to right bottom, #ffffff, #ede6ff, #e0ccff, #d6b0ff, #d093ff, #c479e2, #b75ec5, #aa42a8, #852f72, #5c2145, #321522, #000000);
+}
+
+#welcome{
+  padding-top: 50px;
+}
+#welcome h1{
+  text-align: center;
+  font-size: clamp(60px, 9vw, 400px);
+}
+
+#about{
+  padding-top: 50px;
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+#about h1{
+  font-size: clamp(40px, 7vh, 380px);
+}
+#about p{
+  font-size: clamp(35px, 5vh, 300px);
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head prefix="og:http://ogp.me/ns#">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+JP">
+    
+    <title>footer</title>
+
+    <style>
+      .link{
+        width: 16px; 
+        height: 16px;
+      }
+      footer {
+        text-align: center;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        /*opacity: 0.50;
+        background-color: #fff;*/
+        color: #000;
+      }
+      .glas-filter{
+        backdrop-filter: blur(5px);
+          -webkit-backdrop-filter: blur(5px);
+      }
+      @supports not (backdrop-filter: blur(5px)) {
+        .glas-filter{
+          background-color: rgba(255, 255, 255, 0.4);
+        }
+      }
+      @media all and (-ms-high-contrast: none) {
+        *{
+          font-size: initial;
+        }
+        .glas-filter{
+          background-color: rgba(255, 255, 255, 0.5);
+        }
+      }
+      .move-top{
+        position: fixed;
+        right: 10px;
+        bottom: 20px;
+        height: 50px;
+        text-decoration: none;
+        font-weight: bold;
+        transform: rotate(90deg);
+        font-size: 90%;
+        line-height: 1.5rem;
+        color: #000;
+        padding: 0 0 0 35px;
+        border-top: solid 1px;
+        z-index: 2;
+      }
+      .move-top::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: -1px;
+        left: 0px;
+        width: 15px;
+        border-top: solid 1px;
+        transform: rotate(35deg);
+        transform-origin: left top;
+      }
+    </style>
+  </head>
+
+  <body>
+    
+    <footer class="glas-filter">
+      <h4>Created by <a href="https://twitter.com/null8R" title="My Twitter" target="_blanl" rel="noopener noreferrer"><span class="name">null🦋</span></a>.</h4>
+      <a class="move-top" href="#">TOP</a>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="/src/main.js"></script>
+
+    <noscript>
+      
+    </noscript>
+  </body>
+</html>
